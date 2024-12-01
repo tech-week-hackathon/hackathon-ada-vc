@@ -1,7 +1,7 @@
 //import * as Cardano from "@emurgo/cardano-serialization-lib-browser";
-import initCardano, * as Cardano from "@emurgo/cardano-serialization-lib-browser/wasm?init";
+//import initCardano, * as Cardano from "@emurgo/cardano-serialization-lib-browser/wasm?init";
 
-await initCardano(); // Ensure the WASM module is initialized before using
+//await initCardano(); // Ensure the WASM module is initialized before using
 
 import React, { useState } from 'react';
 import Questionnaire from './components/Questionnaire';
@@ -49,7 +49,7 @@ const App = () => {
   const [transactionStatus, setTransactionStatus] = useState("");
   const [cardanoInitialized, setCardanoInitialized] = useState(false);
 
-  useEffect(() => {
+/*   useEffect(() => {
     const initializeWasm = async () => {
       await initCardano();
       setCardanoInitialized(true);
@@ -59,7 +59,7 @@ const App = () => {
 
   if (!cardanoInitialized) {
     return <div>Loading...</div>; // Show a loading indicator until WASM is initialized
-  }
+  } */
   
 
   const handleLogin = (loggedInUser) => {
@@ -83,7 +83,7 @@ const App = () => {
     
     setPage('results');
   
-    // Attempt to connect to Cardano wallet
+    /* // Attempt to connect to Cardano wallet
     try {
       if (!window.cardano || !window.cardano.nami) {
         setTransactionStatus("Nami wallet is not installed. Please install it.");
@@ -104,7 +104,7 @@ const App = () => {
     } catch (error) {
       console.error(error);
       setTransactionStatus("Transaction failed. Please check your wallet.");
-    }
+    } */
 
     // Update user score in the database
     fetch(`http://localhost:3001/users/${user.id}`, {
@@ -154,7 +154,7 @@ const App = () => {
 
   return (
     <div style={{ margin: '20px', fontFamily: 'Arial, sans-serif' }}>
-      <h1>Quiz & Voting App</h1>
+      <h1>ADA VR - Qualified Voters</h1>
       {page === 'login' && <Login onLogin={handleLogin} />}
       {user && page === 'quiz' && (
         <Questionnaire
