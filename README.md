@@ -1,3 +1,25 @@
+How to run the app:
+
+1. Open Terminal and install all packages with NPM:
+
+```
+npm install
+```
+
+2. Run JSON-Server with the following command
+
+```
+npm run server
+```
+
+3. Open another terminal, while the terminal with the JSON-Server is still runing, and execute the following line:
+
+```
+npm run dev
+```
+
+4. Open http://localhost:5173/ in your web browser to use the app
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/gwqsiey-)
 # Resources related to governance in Cardano
 
